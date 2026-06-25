@@ -1,0 +1,20 @@
+# .github/workflows/publish.yml
+name: Publish to pub.dev
+
+on:
+  push:
+    tags:
+    - 'v[0-9]+.[0-9]+.[0-9]+' # tag-pattern on pub.dev: 'v{{version}}'
+
+# Publish using custom workflow
+jobs:
+  publish:
+    permissions:
+      id-token: write # Required for authentication using OIDC
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Dragon-InterActive/ds_i18n/.github/workflows/publish.yml@v1
+      - name: Install dependencies
+        run: dart pub get
+      - name: Publish
+        run: dart pub publish --force
