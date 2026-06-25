@@ -1,0 +1,5 @@
+{
+  "supportedLocales": ["en", "de"],
+  "defaultLocale": "en",
+  "fallbackLocale": "en"
+}

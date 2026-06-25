@@ -1,0 +1,31 @@
+name: ds_i18n
+description: >-
+  Lightweight, JSON-based localization for Flutter. Drop translation files into
+  assets/i18n/, call I18n.t('key'), switch languages at runtime. No codegen.
+version: 0.1.0
+homepage: https://github.com/Dragon-InterActive/ds_i18n
+repository: https://github.com/Dragon-InterActive/ds_i18n
+issue_tracker: https://github.com/Dragon-InterActive/ds_i18n/issues
+
+topics:
+  - i18n
+  - l10n
+  - localization
+  - internationalization
+  - translation
+
+environment:
+  sdk: ^3.9.0
+  flutter: ">=3.35.1"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:

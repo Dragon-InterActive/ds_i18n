@@ -1,0 +1,8 @@
+{
+  "appTitle": "ds_i18n Demo",
+  "greeting": "Hallo, {name}!",
+  "counter": "{count} mal getippt",
+  "menu": {
+    "settings": "Einstellungen"
+  }
+}
