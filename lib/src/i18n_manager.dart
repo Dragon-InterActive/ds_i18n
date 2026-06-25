@@ -79,8 +79,7 @@ class I18nManager {
         final fallbackCode = _config?.fallbackLocale ?? 'en';
         final fallbackPath = 'assets/i18n/$fallbackCode.json';
         final fallbackJsonString = await rootBundle.loadString(fallbackPath);
-        _translations =
-            json.decode(fallbackJsonString) as Map<String, dynamic>;
+        _translations = json.decode(fallbackJsonString) as Map<String, dynamic>;
       } catch (e) {
         _translations = {};
       }

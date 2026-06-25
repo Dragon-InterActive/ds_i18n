@@ -25,7 +25,10 @@ class _DemoAppState extends State<DemoApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ds_i18n Demo',
-      theme: ThemeData(colorSchemeSeed: const Color(0xFF990000), useMaterial3: true),
+      theme: ThemeData(
+        colorSchemeSeed: const Color(0xFF990000),
+        useMaterial3: true,
+      ),
       // Honor the current language's text direction (LTR/RTL).
       home: Directionality(
         textDirection: I18nManager.instance.textDirection,
@@ -54,13 +57,17 @@ class _DemoPageState extends State<DemoPage> {
         title: Text(I18n.t('appTitle')),
         actions: [
           PopupMenuButton<Locale>(
-            initialValue: Locale(I18nManager.instance.currentLocale.languageCode),
+            initialValue: Locale(
+              I18nManager.instance.currentLocale.languageCode,
+            ),
             onSelected: widget.onSwitch,
             itemBuilder: (context) => I18n.supportedLocales
-                .map((l) => PopupMenuItem(
-                      value: l,
-                      child: Text(l.languageCode.toUpperCase()),
-                    ))
+                .map(
+                  (l) => PopupMenuItem(
+                    value: l,
+                    child: Text(l.languageCode.toUpperCase()),
+                  ),
+                )
                 .toList(),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
