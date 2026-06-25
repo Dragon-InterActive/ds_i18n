@@ -11,10 +11,4 @@ jobs:
   publish:
     permissions:
       id-token: write # Required for authentication using OIDC
-    steps:
-      - uses: actions/checkout@v3
-      - uses: Dragon-InterActive/ds_i18n/.github/workflows/publish.yml@v1
-      - name: Install dependencies
-        run: dart pub get
-      - name: Publish
-        run: dart pub publish --force
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
